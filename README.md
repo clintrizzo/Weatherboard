@@ -12,3 +12,5 @@ The main issues that I ran into were that I couldn't get the null to be removed 
 
 # Deployed Website
 [deployed-website](https://clintrizzo.github.io/Weatherboard/)
+![image](screenshot0.png)
+![image](screenshot.png)
