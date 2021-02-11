@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://s7d2.scene7.com/is/image/TWCNews/0801_n13_chuluotaweatherjpg?wid=1250&hei=703&$wide-bg$");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+i:hover {
+    opacity: 0.6;
+    color: aliceblue;
+}
