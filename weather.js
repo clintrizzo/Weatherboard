@@ -11,7 +11,7 @@ for (var i = 0; i < localStorage.length; i++) {
     cityName.append("<p>" + city + "</p>");
 }
 
-var keyCount = 0;
+var keyCount = 1;
 
 searchButton.click(function() {
 
@@ -32,6 +32,7 @@ searchButton.click(function() {
         }).then(function(response) {
             var cityName = $(".list-group").addClass("list-group-item");
             cityName.append("<p>" + response.name + "</p>");
+
 
             var local = localStorage.setItem(keyCount, response.name);
             keyCount = keyCount + 1;
