@@ -60,10 +60,10 @@ searchButton.click(function() {
             var fiveDayDiv = $(".fiveDay").addClass("card-text");
             fiveDayDiv.empty();
             day.forEach(function(i) {
-                var FiveDayDate = new Date(response.list[i].dt * 1000);
-                FiveDayDate = FiveDayDate.toLocaleDateString("en-US");
+                var FiveDayTime = new Date(response.list[i].dt * 1000);
+                FiveDayTime = FiveDayTime.toLocaleDateString("en-US");
 
-                fiveDayDiv.append("<div class=fiveDayWeather>" + "<p>" + FiveDayDate + "</p>" + `<img src="https://openweathermap.org/img/wn/${response.list[i].weather[0].icon}@2x.png">` + "<p>" + "Temperature: " + response.list[i].main.temp + "</p>" + "<p>" + "Humidity: " + response.list[i].main.humidity + "%" + "</p>" + "<hr style=width:100%; font-size=3px;>" + "</div>");
+                fiveDayDiv.append("<div class=fiveDayWeather>" + "<p>" + FiveDayTime + "</p>" + `<img src="https://openweathermap.org/img/wn/${response.list[i].weather[0].icon}@2x.png">` + "<p>" + "Temperature: " + response.list[i].main.temp + "</p>" + "<p>" + "Humidity: " + response.list[i].main.humidity + "%" + "</p>" + "<hr>" + "</div>");
             })
         });
     }
