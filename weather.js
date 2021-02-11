@@ -10,7 +10,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
     cityName.append("<p>" + city + "</p>");
 }
-
+//for the cities to append to the searched card//
 var keyCount = 1;
 
 searchButton.click(function() {
@@ -32,11 +32,11 @@ searchButton.click(function() {
         }).then(function(response) {
             var cityName = $(".list-group").addClass("list-group-item");
             cityName.append("<p>" + response.name + "</p>");
-
+            //for cities to be appeneded and called
 
             var local = localStorage.setItem(keyCount, response.name);
             keyCount = keyCount + 1;
-
+            //current weather appended items
             var currentCard = $(".currentCard").append("<div>").addClass("card-body");
             currentCard.empty();
             var currentName = currentCard.append("<p>");
@@ -63,7 +63,7 @@ searchButton.click(function() {
             day.forEach(function(i) {
                 var FiveDayTime = new Date(response.list[i].dt * 1000);
                 FiveDayTime = FiveDayTime.toLocaleDateString("en-US");
-
+                //code for the five day weather cards
                 fiveDayDiv.append("<div class=fiveDayWeather>" + "<p>" + FiveDayTime + "</p>" + `<img src="https://openweathermap.org/img/wn/${response.list[i].weather[0].icon}@2x.png">` + "<p>" + "Temperature: " + response.list[i].main.temp + "</p>" + "<p>" + "Humidity: " + response.list[i].main.humidity + "%" + "</p>" + "<hr>" + "</div>");
             })
         });
